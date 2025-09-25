@@ -7,8 +7,7 @@ class Auth {
     private $db;
     
     public function __construct() {
-        $database = new Database();
-        $this->db = $database->getConnection();
+        $this->db = getDBConnection();
     }
     
     public function register($username, $email, $password) {
